@@ -3,13 +3,17 @@ const path = require('path');
 const PORT = 3030;
 
 const app = express();
-
-
-
-    
+ 
 app.get("/", (req, res) => {
     res.sendFile(path.join(__dirname, 'views/index.html'));
 })
+
+app.get('/lovelace', (req, res) => {
+    res.sendFile(path.join(__dirname, '/views/lovelace.html'));
+});
+
+app.get('/turing', (req, res) => {
+    res.sendFile(path.join(__dirname, '/views/turing.html'));
 
 app.get('/hamilton', (req,res) =>{
     res.sendFile(path.join(__dirname, '/views/hamilton.html'))
@@ -29,7 +33,6 @@ app.get('/clarke', (req, resp) => {
 
 app.get("/babbage", (req, res) => {
     res.sendFile(path.join(__dirname, 'views/babbage.html'));
-
 })
 
 app.listen(PORT, () => {
