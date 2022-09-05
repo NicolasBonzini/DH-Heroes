@@ -24,11 +24,11 @@ app.get('/hopper', (req, res) => {
 })
 
 app.get('/berners-lee', (req, resp) => {
-    resp.sendFile(path.join(__dirname, '/views/berners-lee'));
+    resp.sendFile(path.join(__dirname, '/views/berners-lee.html'));
 })
 
 app.get('/clarke', (req, resp) => {
-    resp.sendFile(path.join(__dirname, '/views/berners-lee'));
+    resp.sendFile(path.join(__dirname, '/views/clarke.html'));
 })
 
 app.get("/babbage", (req, res) => {
